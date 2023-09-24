@@ -1,6 +1,8 @@
+import 'package:addy/loginscreen/login.dart';
 import 'package:flutter/material.dart';
 import 'package:addy/colors/themes.dart';
 import 'landingpage/landing.dart';
+import 'registerscreen/register.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,4 +1,5 @@
 import 'package:addy/colors/themes.dart';
+import 'package:addy/registerscreen/register.dart';
 import 'package:flutter/material.dart';
 import 'package:addy/colors/colors.dart';
 
@@ -65,7 +66,13 @@ class LandingPage extends StatelessWidget {
                   width: 270,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => RegisterScreen(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
