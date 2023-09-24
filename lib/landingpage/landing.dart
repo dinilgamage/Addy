@@ -31,13 +31,14 @@ class LandingPage extends StatelessWidget {
                 ),
                 RichText(
                   textAlign: TextAlign.center,
-                  text: const TextSpan(
+                  text: TextSpan(
                     text: 'Advertise',
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.w800,
-                      color: AppColors
-                          .secondaryLight, // Change text color as needed
+                      color: Theme.of(context).brightness == Brightness.light
+                          ? Color.fromARGB(255, 35, 93, 89)
+                          : Color.fromARGB(255, 112, 177, 173),
                     ),
                     children: <TextSpan>[
                       TextSpan(
@@ -51,8 +52,10 @@ class LandingPage extends StatelessWidget {
                         text: 'Audience',
                         style: TextStyle(
                           fontSize: 30,
-                          color: AppColors
-                              .secondaryLight, // Change color as needed
+                          color:
+                              Theme.of(context).brightness == Brightness.light
+                                  ? Color.fromARGB(255, 35, 93, 89)
+                                  : Color.fromARGB(255, 112, 177, 173),
                         ),
                       ),
                     ],
