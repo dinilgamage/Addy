@@ -88,7 +88,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: size.height * 0.012,
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -105,7 +105,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: size.height * 0.012,
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -122,7 +122,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: size.height * 0.012,
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -139,7 +139,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: size.height * 0.025,
                       ),
                       SizedBox(
                         width: double.infinity,
@@ -165,7 +165,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: size.height * 0.01,
                       ),
                       TextButton(
                           onPressed: () {
