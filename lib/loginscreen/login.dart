@@ -1,5 +1,6 @@
 import 'package:addy/registerscreen/register.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -20,11 +21,12 @@ class LoginScreen extends StatelessWidget {
                     padding: EdgeInsets.only(top: 30),
                     child: Text(
                       'Dive In',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
-                      ),
+                      )),
                     ),
                   ),
                   Image(
@@ -50,27 +52,28 @@ class LoginScreen extends StatelessWidget {
                             child: Row(
                               children: [
                                 Image.asset('assets/google-logo.png'),
-                                Text(
-                                  'Continue with Google',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    color: Colors.grey,
-                                  ),
-                                ),
+                                Text('Continue with Google',
+                                    style: GoogleFonts.poppins(
+                                      textStyle: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.grey,
+                                      ),
+                                    )),
                               ],
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 25),
+                        padding: const EdgeInsets.symmetric(vertical: 23),
                         child: Text(
                           'or',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
-                          ),
+                          )),
                         ),
                       ),
                       Container(
@@ -81,7 +84,8 @@ class LoginScreen extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.only(left: 15),
-                            hintStyle: TextStyle(fontSize: 15),
+                            hintStyle: GoogleFonts.poppins(
+                                textStyle: TextStyle(fontSize: 15)),
                             hintText: 'Enter your email',
                             border: InputBorder.none,
                           ),
@@ -98,7 +102,8 @@ class LoginScreen extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.only(left: 15),
-                            hintStyle: TextStyle(fontSize: 15),
+                            hintStyle: GoogleFonts.poppins(
+                                textStyle: TextStyle(fontSize: 15)),
                             hintText: 'Enter your password',
                             border: InputBorder.none,
                           ),
@@ -112,7 +117,9 @@ class LoginScreen extends StatelessWidget {
                                 onPressed: () {},
                                 child: Text(
                                   'Forgot Password?',
-                                  style: TextStyle(color: Colors.white),
+                                  style: GoogleFonts.poppins(
+                                      textStyle:
+                                          TextStyle(color: Colors.white)),
                                   textAlign: TextAlign.start,
                                 )),
                           ],
@@ -120,7 +127,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       SizedBox(
                         width: double.infinity,
-                        height: 50,
+                        height: 55,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
@@ -129,14 +136,15 @@ class LoginScreen extends StatelessWidget {
                             backgroundColor:
                                 Theme.of(context).colorScheme.secondary,
                           ),
-                          child: const Padding(
+                          child: Padding(
                             padding: EdgeInsets.all(10),
                             child: Text(
                               'Login',
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                              style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ),
@@ -154,17 +162,21 @@ class LoginScreen extends StatelessWidget {
                           },
                           child: Text.rich(TextSpan(
                               text: 'Don\'t have an account?  ',
-                              style: TextStyle(color: Colors.white),
+                              style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(color: Colors.white)),
                               children: [
                                 TextSpan(
                                     text: 'Register',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        color: Theme.of(context).brightness ==
-                                                Brightness.light
-                                            ? Color.fromARGB(255, 35, 93, 89)
-                                            : Color.fromARGB(
-                                                255, 112, 177, 173)))
+                                    style: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color:
+                                                Theme.of(context).brightness ==
+                                                        Brightness.light
+                                                    ? Color.fromARGB(
+                                                        255, 35, 93, 89)
+                                                    : Color.fromARGB(
+                                                        255, 112, 177, 173))))
                               ]))),
                     ],
                   ))

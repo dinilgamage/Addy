@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:addy/loginscreen/login.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -20,11 +21,12 @@ class RegisterScreen extends StatelessWidget {
                     padding: EdgeInsets.only(top: 30),
                     child: Text(
                       'Join us',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
-                      ),
+                      )),
                     ),
                   ),
                   Image(
@@ -50,27 +52,28 @@ class RegisterScreen extends StatelessWidget {
                             child: Row(
                               children: [
                                 Image.asset('assets/google-logo.png'),
-                                Text(
-                                  'Continue with Google',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    color: Colors.grey,
-                                  ),
-                                ),
+                                Text('Continue with Google',
+                                    style: GoogleFonts.poppins(
+                                      textStyle: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.grey,
+                                      ),
+                                    )),
                               ],
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        padding: const EdgeInsets.symmetric(vertical: 7),
                         child: Text(
                           'or',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
-                          ),
+                          )),
                         ),
                       ),
                       Container(
@@ -81,7 +84,8 @@ class RegisterScreen extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.only(left: 15),
-                            hintStyle: TextStyle(fontSize: 15),
+                            hintStyle: GoogleFonts.poppins(
+                                textStyle: TextStyle(fontSize: 15)),
                             hintText: 'Enter your full name',
                             border: InputBorder.none,
                           ),
@@ -98,7 +102,8 @@ class RegisterScreen extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.only(left: 15),
-                            hintStyle: TextStyle(fontSize: 15),
+                            hintStyle: GoogleFonts.poppins(
+                                textStyle: TextStyle(fontSize: 15)),
                             hintText: 'Enter your email',
                             border: InputBorder.none,
                           ),
@@ -115,7 +120,8 @@ class RegisterScreen extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.only(left: 15),
-                            hintStyle: TextStyle(fontSize: 15),
+                            hintStyle: GoogleFonts.poppins(
+                                textStyle: TextStyle(fontSize: 15)),
                             hintText: 'Enter your password',
                             border: InputBorder.none,
                           ),
@@ -132,7 +138,8 @@ class RegisterScreen extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.only(left: 15),
-                            hintStyle: TextStyle(fontSize: 15),
+                            hintStyle: GoogleFonts.poppins(
+                                textStyle: TextStyle(fontSize: 15)),
                             hintText: 'Confirm your password',
                             border: InputBorder.none,
                           ),
@@ -143,7 +150,7 @@ class RegisterScreen extends StatelessWidget {
                       ),
                       SizedBox(
                         width: double.infinity,
-                        height: 50,
+                        height: 55,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
@@ -152,15 +159,15 @@ class RegisterScreen extends StatelessWidget {
                             backgroundColor:
                                 Theme.of(context).colorScheme.secondary,
                           ),
-                          child: const Padding(
+                          child: Padding(
                             padding: EdgeInsets.all(10),
-                            child: Text(
-                              'Register',
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                            child: Text('Register',
+                                style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                )),
                           ),
                         ),
                       ),
@@ -177,17 +184,21 @@ class RegisterScreen extends StatelessWidget {
                           },
                           child: Text.rich(TextSpan(
                               text: 'Already have an account?  ',
-                              style: TextStyle(color: Colors.white),
+                              style: GoogleFonts.poppins(
+                                  textStyle: TextStyle(color: Colors.white)),
                               children: [
                                 TextSpan(
                                     text: 'Login',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        color: Theme.of(context).brightness ==
-                                                Brightness.light
-                                            ? Color.fromARGB(255, 35, 93, 89)
-                                            : Color.fromARGB(
-                                                255, 112, 177, 173)))
+                                    style: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color:
+                                                Theme.of(context).brightness ==
+                                                        Brightness.light
+                                                    ? Color.fromARGB(
+                                                        255, 35, 93, 89)
+                                                    : Color.fromARGB(
+                                                        255, 112, 177, 173))))
                               ]))),
                     ],
                   ))

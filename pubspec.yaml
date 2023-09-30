@@ -40,6 +40,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  google_fonts: ^6.1.0
 
 flutter_native_splash:
   color_dark: "#1E1E1E"

@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:addy/colors/themes.dart';
 import 'package:addy/registerscreen/register.dart';
 import 'package:flutter/material.dart';
@@ -23,36 +24,39 @@ class LandingPage extends StatelessWidget {
                     image: AssetImage('assets/landing.png'),
                   ),
                 ),
-                const Text(
+                Text(
                   'Welcome',
-                  style: TextStyle(
-                      fontSize: 40,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600),
+                  style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600)),
                 ),
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
                     text: 'Advertise',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w800,
-                      color: Theme.of(context).brightness == Brightness.light
-                          ? Color.fromARGB(255, 35, 93, 89)
-                          : Color.fromARGB(255, 112, 177, 173),
+                    style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w800,
+                          color:
+                              Theme.of(context).brightness == Brightness.light
+                                  ? Color.fromARGB(255, 35, 93, 89)
+                                  : Color.fromARGB(255, 112, 177, 173)),
                     ),
                     children: <TextSpan>[
                       TextSpan(
                         text: ' with Ease, Reach your ',
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 25,
                           color: Colors.white, // Change color as needed
                         ),
                       ),
                       TextSpan(
                         text: 'Audience',
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 25,
                           color:
                               Theme.of(context).brightness == Brightness.light
                                   ? Color.fromARGB(255, 35, 93, 89)
@@ -64,7 +68,7 @@ class LandingPage extends StatelessWidget {
                 ),
                 SizedBox(
                   width: 270,
-                  height: 50,
+                  height: 55,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).push(
@@ -78,15 +82,15 @@ class LandingPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20)),
                       backgroundColor: Theme.of(context).colorScheme.secondary,
                     ),
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.all(10),
-                      child: Text(
-                        'Get Started',
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
+                      child: Text('Get Started',
+                          style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          )),
                     ),
                   ),
                 ),
