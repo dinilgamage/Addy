@@ -1,3 +1,4 @@
+import 'package:addy/Dash.dart';
 import 'package:addy/loginscreen/login.dart';
 import 'package:flutter/material.dart';
 import 'package:addy/colors/themes.dart';

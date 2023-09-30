@@ -9,7 +9,7 @@ class AppTheme {
       color: Color.fromARGB(255, 35, 93, 89),
     )),
     colorScheme: const ColorScheme.light(
-        primary: Color.fromARGB(255, 216, 241, 240),
+        primary: Color.fromARGB(255, 194, 234, 233),
         secondary: Color.fromARGB(255, 35, 93, 89)),
 
     // elevatedButtonTheme: ElevatedButtonThemeData(

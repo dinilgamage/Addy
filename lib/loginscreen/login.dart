@@ -1,3 +1,4 @@
+import 'package:addy/Dash.dart';
 import 'package:addy/homescreen/home.dart';
 import 'package:addy/registerscreen/register.dart';
 import 'package:flutter/material.dart';
@@ -131,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context).pushReplacement(
                           MaterialPageRoute(
-                            builder: (context) => HomeScreen(),
+                            builder: (context) => Dash(),
                           ),
                         );
                       },
