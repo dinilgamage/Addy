@@ -31,20 +31,26 @@ class _DashState extends State<Dash> {
         color: Theme.of(context).colorScheme.primary,
         animationDuration: Duration(milliseconds: 300),
         items: [
-          Container(
-            width: 35,
-            height: 35,
-            child: Image.asset('assets/nav/home.png'),
+          Icon(
+            Icons.home,
+            size: 30,
+            color: Theme.of(context).brightness == Brightness.light
+                ? Color.fromARGB(255, 35, 93, 89)
+                : Color.fromARGB(255, 112, 177, 173),
           ),
-          Container(
-            width: 35,
-            height: 35,
-            child: Image.asset('assets/nav/post.png'),
+          Icon(
+            Icons.add_circle,
+            size: 30,
+            color: Theme.of(context).brightness == Brightness.light
+                ? Color.fromARGB(255, 35, 93, 89)
+                : Color.fromARGB(255, 112, 177, 173),
           ),
-          Container(
-            width: 35,
-            height: 35,
-            child: Image.asset('assets/nav/profile.png'),
+          Icon(
+            Icons.person,
+            size: 30,
+            color: Theme.of(context).brightness == Brightness.light
+                ? Color.fromARGB(255, 35, 93, 89)
+                : Color.fromARGB(255, 112, 177, 173),
           ),
         ],
         onTap: (index) {

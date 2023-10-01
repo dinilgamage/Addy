@@ -1,3 +1,4 @@
+import 'package:addy/custom-widgets/card.dart';
 import 'package:addy/main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -43,44 +44,158 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Row(
+            child: Column(
               children: [
-                Text("Welcome Dinil",
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )),
                 SizedBox(
-                    width: 16.0), // Add spacing between text and search bar
-                Expanded(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0),
-                    decoration: BoxDecoration(
-                      color: Theme.of(context)
-                          .colorScheme
-                          .primary, // Background color
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                    child: Row(
-                      children: [
-                        Icon(Icons.search),
-                        SizedBox(
-                            width:
-                                8.0), // Add spacing between icon and text field
-                        Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: "Search",
-                              border: InputBorder.none,
+                  height: 36,
+                  child: Row(
+                    children: [
+                      Text("Welcome",
+                          style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )),
+                      SizedBox(
+                          width:
+                              40.0), // Add spacing between text and search bar
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          decoration: BoxDecoration(
+                            color: Theme.of(context)
+                                .colorScheme
+                                .primary, // Background color
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Expanded(
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    hintText: "Search",
+                                    hintStyle: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.bold)),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                              Icon(Icons.search),
+                              SizedBox(width: 8.0),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 25,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 70,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(19),
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/categories/vehicle.png',
+                              width: 60,
+                              height: 60,
                             ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
-                  ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 70,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(19),
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/categories/electronics.png',
+                              width: 60,
+                              height: 60,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 70,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(19),
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/categories/property.png',
+                              width: 60,
+                              height: 60,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 70,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(19),
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/categories/fashion.png',
+                              width: 60,
+                              height: 60,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
+                Row(
+                  children: [
+                    CustomCard(
+                      imageUrl: 'https://example.com/path/to/image.jpg',
+                      title: 'Your Title Here',
+                      subtitle: 'Your Subtitle Here',
+                    ),
+                  ],
+                )
               ],
             )));
   }

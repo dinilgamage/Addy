@@ -22,13 +22,13 @@ class AppTheme {
   );
 
   static ThemeData darkTheme = ThemeData(
-    scaffoldBackgroundColor: Color.fromARGB(255, 30, 30, 30),
+    scaffoldBackgroundColor: Color.fromARGB(255, 80, 80, 80),
     textTheme: const TextTheme(
         displayMedium: TextStyle(
       color: Color.fromARGB(255, 112, 177, 173),
     )),
     colorScheme: const ColorScheme.dark(
-      primary: Color.fromARGB(255, 49, 51, 51),
+      primary: Color.fromARGB(255, 49, 49, 49),
       secondary: Color.fromARGB(255, 35, 93, 89),
     ),
     // elevatedButtonTheme: ElevatedButtonThemeData(

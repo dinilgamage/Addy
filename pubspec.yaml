@@ -39,6 +39,9 @@ dependencies:
   provider: ^6.0.5
   google_fonts: ^6.1.0
   curved_navigation_bar: ^1.0.3
+  image_picker: ^1.0.4
+  shared_preferences: ^2.2.1
+  
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +84,7 @@ flutter:
   assets:
     - assets/
     - assets/nav/
+    - assets/categories/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

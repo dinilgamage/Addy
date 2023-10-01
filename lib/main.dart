@@ -1,11 +1,9 @@
 import 'package:addy/Dash.dart';
-import 'package:addy/loginscreen/login.dart';
+import 'package:addy/registerscreen/register.dart';
 import 'package:flutter/material.dart';
 import 'package:addy/colors/themes.dart';
 import 'package:provider/provider.dart';
 import 'landingpage/landing.dart';
-import 'registerscreen/register.dart';
-import 'homescreen/home.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(

@@ -1,8 +1,6 @@
 import 'package:google_fonts/google_fonts.dart';
-import 'package:addy/colors/themes.dart';
 import 'package:addy/registerscreen/register.dart';
 import 'package:flutter/material.dart';
-import 'package:addy/colors/colors.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
