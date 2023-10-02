@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:addy/landingpage/landing.dart';
 import 'package:addy/loginscreen/login.dart';
 import 'package:addy/main.dart';
 import 'package:addy/user_service.dart';
