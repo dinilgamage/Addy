@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:addy/landingpage/landing.dart';
+import 'package:addy/loginscreen/login.dart';
 import 'package:addy/main.dart';
 import 'package:addy/user_service.dart';
 import 'package:flutter/material.dart';
@@ -92,7 +93,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -102,17 +103,68 @@ class _ProfileScreenState extends State<ProfileScreen> {
             SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-              onPressed: () async {
-                await userService.logout();
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => LandingPage(),
+            Center(
+              child: Text(
+                'Dinil Gamage',
+                style: GoogleFonts.poppins(
+                  textStyle:
+                      TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              width: 350,
+              height: 45,
+              child: Align(
+                alignment: Alignment.center,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    await userService.setLoggedIn(false);
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => LoginScreen(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
                   ),
-                );
-              },
-              child: Text("Logout"),
-            )
+                  child: Padding(
+                    padding: EdgeInsets.all(3),
+                    child: Text('Log out',
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        )),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+              child: Text(
+                'My Ads',
+                style: GoogleFonts.poppins(
+                  textStyle:
+                      TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Divider(
+              thickness: 4, // Specify the thickness of the line
+            ),
           ],
         ),
       ),

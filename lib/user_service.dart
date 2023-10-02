@@ -31,20 +31,25 @@ class UserService {
     return data[email] == password;
   }
 
-  Future<void> saveUserDetails(String firstName, bool isLoggedIn) async {
-    final prefs = await SharedPreferences.getInstance();
-    prefs.setString('firstName', firstName);
-    prefs.setBool('isLoggedIn', isLoggedIn);
-  }
+  // Future<void> saveUserDetails(String firstName, bool isLoggedIn) async {
+  //   final prefs = await SharedPreferences.getInstance();
+  //   prefs.setString('firstName', firstName);
+  //   prefs.setBool('isLoggedIn', isLoggedIn);
+  // }
 
-  Future<String?> getFirstName() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getString('firstName');
-  }
+  // Future<String?> getFirstName() async {
+  //   final prefs = await SharedPreferences.getInstance();
+  //   return prefs.getString('firstName');
+  // }
 
   Future<bool> isLoggedIn() async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getBool('isLoggedIn') ?? false;
+    return prefs.getBool('loggedIn') ?? false;
+  }
+
+  Future<void> setLoggedIn(bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setBool('loggedIn', value);
   }
 
   Future<void> logout() async {

@@ -1,18 +1,23 @@
 import 'package:addy/Dash.dart';
-import 'package:addy/registerscreen/register.dart';
+import 'package:addy/homescreen/home.dart';
+import 'package:addy/loginscreen/login.dart';
+import 'package:addy/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:addy/colors/themes.dart';
 import 'package:provider/provider.dart';
 import 'landingpage/landing.dart';
 
-void main() {
+void main() async {
+  final UserService userService = UserService();
+  WidgetsFlutterBinding.ensureInitialized();
+  bool loggedIn = await userService.isLoggedIn();
   runApp(ChangeNotifierProvider(
-      create: (context) => ThemeProvider(), child: const MyApp()));
+      create: (context) => ThemeProvider(), child: MyApp(loggedIn: loggedIn)));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  final bool loggedIn;
+  MyApp({required this.loggedIn});
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -22,7 +27,7 @@ class MyApp extends StatelessWidget {
       title: 'Addy',
       theme: themeProvider.themeData,
       themeMode: themeProvider.themeMode,
-      home: LandingPage(),
+      home: loggedIn ? Dash() : LandingPage(),
     );
   }
 }

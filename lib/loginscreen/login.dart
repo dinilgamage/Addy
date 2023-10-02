@@ -147,6 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               bool isValid = await userService.validateUser(
                                   emailController.text,
                                   passwordController.text);
+                              await userService.setLoggedIn(true);
                               if (isValid) {
                                 Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(

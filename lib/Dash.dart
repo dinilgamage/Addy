@@ -29,7 +29,7 @@ class _DashState extends State<Dash> {
         height: 55,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         color: Theme.of(context).colorScheme.primary,
-        animationDuration: Duration(milliseconds: 300),
+        animationDuration: Duration(milliseconds: 500),
         items: [
           Icon(
             Icons.home,
