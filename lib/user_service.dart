@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -55,5 +56,19 @@ class UserService {
   Future<void> logout() async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setBool('isLoggedIn', false);
+  }
+
+  Future<ThemeMode> getThemePreference() async {
+    final prefs = await SharedPreferences.getInstance();
+    int? storedThemeIndex = prefs.getInt('theme');
+    if (storedThemeIndex == null)
+      return ThemeMode.light; // Default to light theme
+
+    return ThemeMode.values[storedThemeIndex];
+  }
+
+  Future<void> setThemePreference(ThemeMode themeMode) async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setInt('theme', themeMode.index);
   }
 }

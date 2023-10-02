@@ -25,6 +25,7 @@ class _PostScreen extends State<PostScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Theme.of(context).colorScheme.secondary,
         title: Text(
           'Post Ad',

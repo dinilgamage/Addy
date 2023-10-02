@@ -1,6 +1,4 @@
 import 'package:addy/Dash.dart';
-import 'package:addy/homescreen/home.dart';
-import 'package:addy/loginscreen/login.dart';
 import 'package:addy/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:addy/colors/themes.dart';
@@ -12,7 +10,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   bool loggedIn = await userService.isLoggedIn();
   runApp(ChangeNotifierProvider(
-      create: (context) => ThemeProvider(), child: MyApp(loggedIn: loggedIn)));
+      create: (context) => ThemeProvider(userService),
+      child: MyApp(loggedIn: loggedIn)));
 }
 
 class MyApp extends StatelessWidget {
@@ -33,7 +32,12 @@ class MyApp extends StatelessWidget {
 }
 
 class ThemeProvider extends ChangeNotifier {
+  final UserService userService;
   ThemeMode _themeMode = ThemeMode.dark;
+
+  ThemeProvider(this.userService) {
+    _loadThemePreference();
+  }
 
   ThemeMode get themeMode => _themeMode;
 
@@ -48,9 +52,15 @@ class ThemeProvider extends ChangeNotifier {
     }
   }
 
+  void _loadThemePreference() async {
+    _themeMode = await userService.getThemePreference();
+    notifyListeners();
+  }
+
   void toggleTheme() {
     _themeMode =
         _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+    userService.setThemePreference(_themeMode);
     notifyListeners();
   }
 }

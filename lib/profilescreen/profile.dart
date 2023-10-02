@@ -67,6 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Theme.of(context).colorScheme.secondary,
         title: Text(
           'Profile',
@@ -160,11 +161,46 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             Divider(
               thickness: 4, // Specify the thickness of the line
             ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              height: 300,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CardItem(
+                    leftImage: Image.asset(
+                        'assets/card/car1.png'), // Replace with your left image
+                    text: 'Mustang Shelby (Used)',
+
+                    rightImage: Image.asset(
+                        'assets/card/bin.png'), // Replace with your right image
+                  ),
+                  CardItem(
+                    leftImage: Image.asset(
+                        'assets/card/phone1.png'), // Replace with your left image
+                    text: 'Iphone 15 Pro (New)',
+
+                    rightImage: Image.asset(
+                        'assets/card/bin.png'), // Replace with your right image
+                  ),
+                  CardItem(
+                    leftImage: Image.asset(
+                        'assets/card/house1.png'), // Replace with your left image
+                    text: '4 bedroom apartment nugegoda, colombo, srilanka',
+
+                    rightImage: Image.asset(
+                        'assets/card/bin.png'), // Replace with your right image
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
@@ -241,6 +277,61 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CardItem extends StatelessWidget {
+  final Image leftImage;
+  final String text;
+  final Image rightImage;
+
+  CardItem(
+      {required this.leftImage, required this.text, required this.rightImage});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Theme.of(context).colorScheme.primary,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                  width: 90,
+                  height: 65,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: leftImage,
+                  ),
+                ),
+                SizedBox(
+                  width: 210,
+                  child: Text(text,
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w600),
+                      ),
+                      overflow: TextOverflow.ellipsis, // Ellipsis for overflow
+                      maxLines: 2),
+                ),
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: rightImage,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
