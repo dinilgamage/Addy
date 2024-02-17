@@ -1,16 +1,11 @@
-# addy
+# Addy
 
-A new Flutter project.
+ADDY in a nutshell is a mobile application that seamlessly allows users to post and view advertisements
 
-## Getting Started
+## Features
+1. Camera – The app can request access to the camera so users can take a picture of their product and then upload it when posting an advertisement.
+2. Dark/Light mode – The app can switch between dark and light theme according to the user preference
+3. Form designed for mobile devices – The login and registration forms take in input from the user.
+4. App manifest connfigured with custom icons - App contains icons that are Addy themed
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
